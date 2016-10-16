@@ -1,0 +1,23 @@
+
+Article about how this guy used Machine Learning and HFT to make 500k in a year:
+
+http://jspauld.com/post/35126549635/how-i-made-500k-with-machine-learning-and-hft
+
+He used T4 API provided on this website = http://www.ctsfutures.com/background/
+Primarily employed C# to build his algorithm
+
+This website has the information about the volume of data traded on each day of the new york stock exchange - 
+http://www.nyxdata.com/nysedata/asp/factbook/viewer_edition.asp?mode=table&key=3141&category=3
+
+This website has monthly history of the trades provided in csv files, but again for daily volume
+http://www.batstrading.com/market_data/market_volume_history/
+
+Other resources:
+http://www.quantshare.com/sa-43-10-ways-to-download-historical-stock-quotes-data-for-free
+
+
+APIs Jason found:
+
+http://dev.markitondemand.com/MODApis/
+
+https://www.influxdata.com/continuous-queries-in-influxdb-part-i/
