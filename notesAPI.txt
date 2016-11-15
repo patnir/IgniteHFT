@@ -21,3 +21,16 @@ APIs Jason found:
 http://dev.markitondemand.com/MODApis/
 
 https://www.influxdata.com/continuous-queries-in-influxdb-part-i/
+
+
+Machine Learning Library:
+
+http://mlpack.org/sitemap.html
+
+Yahoo Financial Data:
+
+http://ichart.finance.yahoo.com/
+
+Web Scraper for Financial Data:
+
+https://github.com/zacwellmer/yahoo_stock_scraper/blob/master/collect_stock_data.py
