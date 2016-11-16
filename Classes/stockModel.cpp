@@ -27,3 +27,7 @@ string StockModel::serialize() {
 	string t = "cool";
 	return t;
 }
+
+int main(int argc, char ** argv) {
+  return 0;
+}
