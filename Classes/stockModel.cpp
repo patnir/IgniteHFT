@@ -1,9 +1,10 @@
-#include<iostream>
-#include<ctime>
+#include <iostream>
+#include <ctime>
+#include <string>
 using namespace std;
 
 class StockModel {
-	tm date;
+	//tm date;
 	double open;
 	double highg; 
 	double low; 
@@ -12,10 +13,17 @@ class StockModel {
 	double adjClose;
 
 	public:
-		void serialize();
-		void deserialize(string);
 
-	void deserialize(string serializedData) {
+	void deserialize(string serializedData);
 
-	}
+	string serialize();
 };
+
+void StockModel::deserialize(string serializedData) {
+
+}
+
+string StockModel::serialize() {
+	string t = "cool";
+	return t;
+}
