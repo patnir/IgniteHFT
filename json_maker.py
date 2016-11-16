@@ -22,6 +22,7 @@ for row in reader:
     newRow['Volume'] = int(row['Volume'])
     newRow['Adj Close'] = float(row['Adj Close'])
     newRow['Low'] = float(row['Low'])
+    newRow['Date'] = row['Date']
     json.dump(newRow, amzn_json)
     amzn_json.write(',\n')
 
