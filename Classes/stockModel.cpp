@@ -5,9 +5,10 @@
 using namespace std;
 
 class StockModel {
-	//tm date;
+	tm date;
+	string dateString;
 	double open;
-	double highg; 
+	double high; 
 	double low; 
 	double close;
 	double volume;
@@ -18,10 +19,12 @@ class StockModel {
 	void deserialize(string serializedData);
 
 	string serialize();
+
+	void printData();
 };
 
 void StockModel::deserialize(string serializedData) {
-
+	cout << "working with line " << serializedData;
 }
 
 string StockModel::serialize() {
@@ -29,12 +32,32 @@ string StockModel::serialize() {
 	return t;
 }
 
+void StockModel::printData() {
+	//char *outDate = asctime(&date);
+	//cout << "date = " << outDate << "\n";
+	cout << "date = " << dateString << "\n";
+	cout << "open = " << open << "\n";
+	cout << "high = " << high << "\n";
+	cout << "low  = " << low << "\n";
+	cout << "close = " << close << "\n";
+	cout << "volume = " << volume << "\n";
+	cout << "adjClose = " << adjClose << "\n";
+}
+
 void readFile (char *filename) {
 	ifstream fptr (filename);
 	string line;
+	int total = 0;
+	StockModel s;
 	if (fptr.is_open()) {
-		while(getline(fptr, line)) {
-			cout << line << "\n";
+		while(getline(fptr, line) && total <= 1) {
+			//cout << line << "\n";
+			
+			if (total == 1) {
+				s.deserialize(line);
+			}		
+
+			total += 1;
 		}
 		fptr.close();
 	}
