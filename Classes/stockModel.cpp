@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <string>
+#include <fstream>
 using namespace std;
 
 class StockModel {
@@ -28,6 +29,27 @@ string StockModel::serialize() {
 	return t;
 }
 
-int main(int argc, char ** argv) {
-  return 0;
+void readFile (char *filename) {
+	ifstream fptr (filename);
+	string line;
+	if (fptr.is_open()) {
+		while(getline(fptr, line)) {
+			cout << line << "\n";
+		}
+		fptr.close();
+	}
+	else {
+		cout << "Error opening file\n";
+	}
+	return;
 }
+
+int main(int argc, char ** argv) {
+	if (argc != 2) {
+		cout << "Enter file name\n";
+		return 0;
+	}
+	readFile(argv[1]);
+	return 0;
+}
+
